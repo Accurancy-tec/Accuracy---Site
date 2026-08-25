@@ -1,16 +1,22 @@
+<?php
+include('configs/conexao.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Perfil - Accuracy</title>
+    <title>Perfil - Accuracy</title>
 
-<link rel="stylesheet" href="css/perfil.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/perfil.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 </head>
 
@@ -18,103 +24,249 @@
 
 <div class="app">
 
-    <!-- SIDEBAR -->
+    <!-- =========================
+         NAVBAR SUPERIOR
+    ========================== -->
+
     <aside class="sidebar">
 
         <div class="top">
 
+            <!-- LOGO -->
+
             <div class="logo">
+
                 <div class="logo-box"></div>
+
                 <span>Accuracy</span>
+
             </div>
+
+
+            <!-- DIVISOR -->
 
             <div class="divider"></div>
 
+
+            <!-- MENU -->
+
             <nav class="menu">
 
-                <a href="dashboard.html">Dashboard</a>
-                <a href="carteira.html">Carteira</a>
-                <a href="historico.html">Histórico</a>
-                <a href="aportes.html">Aportes</a>
-                <a>Relatórios</a>
-                <a class="active">Perfil</a>
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="carteira.html">
+                    Carteira
+                </a>
+
+                <a href="historico.html">
+                    Histórico
+                </a>
+
+                <a href="aportes.html">
+                    Aportes
+                </a>
+
+                <a href="#">
+                    Relatórios
+                </a>
+
+                <a href="perfil.html" class="active">
+                    Perfil
+                </a>
 
             </nav>
 
         </div>
 
+
+        <!-- USUÁRIO -->
+
         <div class="user">
 
-            <div class="avatar">N</div>
+            <a href="perfil.html">
+
+                <div class="avatar">
+                    N
+                </div>
+
+            </a>
 
             <div>
-                <strong>Nome da pessoa</strong>
-                <p>Perfil do usuário</p>
+
+                <a href="perfil.html">
+                    <strong>Nome da pessoa</strong>
+                </a>
+
+                <p>
+                    Perfil do usuário
+                </p>
+
             </div>
 
         </div>
 
     </aside>
 
-    <!-- MAIN -->
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
     <main class="main">
+
+
+        <!-- TOPBAR -->
 
         <header class="topbar">
 
             <div>
-                <h1>Meu Perfil</h1>
-                <p>Gerencie suas informações pessoais</p>
 
-                
+                <h1>Meu Perfil</h1>
+
+                <p>
+                    Gerencie suas informações pessoais
+                </p>
+
+            </div>
+
+
+            <!-- ÍCONES -->
+
+            <div class="icons">
+
+                <button class="notification-btn">
+
+                    <i class="bi bi-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <a href="perfil.html">
+
+                    <div class="avatar small">
+                        N
+                    </div>
+
+                </a>
+
             </div>
 
         </header>
 
-        <!-- PROFILE CARD -->
+
+        <!-- =========================
+             PROFILE CARD
+        ========================== -->
+
         <section class="profile-card">
+
+
+            <!-- HEADER PERFIL -->
 
             <div class="profile-header">
 
-                <div class="big-avatar">N</div>
+                <div class="big-avatar">
+                    N
+                </div>
 
                 <div>
-                    <h2>Nome da pessoa</h2>
-                    <p class="email">usuario@email.com</p>
+
+                    <h2>
+                        Nome da pessoa
+                    </h2>
+
+                    <p class="email">
+                        usuario@email.com
+                    </p>
+
                 </div>
 
             </div>
+
+
+            <!-- CAMPOS -->
 
             <div class="profile-grid">
 
-                <div class="field">
-                    <label>Nome completo</label>
-                    <input type="text" value="Nome da pessoa">
-                </div>
 
                 <div class="field">
-                    <label>Email</label>
-                    <input type="email" value="usuario@email.com">
+
+                    <label>
+                        Nome completo
+                    </label>
+
+                    <input
+                        type="text"
+                        value="Nome da pessoa"
+                    >
+
                 </div>
 
-                <div class="field">
-                    <label>Senha</label>
-                    <input type="password" value="********">
-                </div>
 
                 <div class="field">
-                    <label>Data de criação</label>
-                    <input type="text" value="18/06/2026" disabled>
+
+                    <label>
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        value="usuario@email.com"
+                    >
+
                 </div>
+
+
+                <div class="field">
+
+                    <label>
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        value="********"
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>
+                        Data de criação
+                    </label>
+
+                    <input
+                        type="text"
+                        value="18/06/2026"
+                        disabled
+                    >
+
+                </div>
+
 
             </div>
 
-            <button class="btn">Salvar alterações</button>
+
+            <!-- BOTÃO -->
+
+            <button class="btn">
+                Salvar alterações
+            </button>
+
 
         </section>
+
 
     </main>
 
 </div>
 
 </body>
+
 </html>
